@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -307,5 +308,186 @@ body {
   padding: 0.5rem 1.5rem;
   -webkit-box-shadow: 5px 5px 0 #000;
           box-shadow: 5px 5px 0 #000;
+}
+
+#skills {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem;
+}
+
+#skills h1 {
+  font-size: 5rem;
+  text-shadow: 5px 5px 0 #ff7a00;
+}
+
+#skills .skills-container {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "skill skill skill" "skill skill skill" "skill skill skill";
+}
+
+#skills .skills-container .skill {
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+#skills .skills-container .skill span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #ff7a00;
+  background: -webkit-gradient(linear, left top, right top, from(#ff7a00), to(#353232));
+  background: linear-gradient(90deg, #ff7a00 0%, #353232 100%);
+}
+
+#projects {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem;
+}
+
+#projects h1 {
+  font-size: 5rem;
+  text-shadow: 5px 5px 0 #ff7a00;
+}
+
+#projects .projects-container {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "skill skill" "skill skill" "skill skill";
+}
+
+#projects .projects-container .project {
+  position: relative;
+  padding: 2rem;
+  height: 25rem;
+  margin-top: 1rem;
+}
+
+#projects .projects-container .project .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20rem;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #e5e5e5;
+}
+
+#projects .projects-container .project .project-content {
+  position: absolute;
+  z-index: 2;
+  top: 12rem;
+  left: 20%;
+}
+
+#projects .projects-container .project .project-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff7a00;
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#footer footer {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer footer .footer-left,
+#footer footer .footer-right {
+  width: 50%;
+}
+
+#footer footer .footer-left {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 5px 5px 0 #ff7a00;
+}
+
+#footer footer .footer-right {
+  padding: 10rem;
+  padding-left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+#footer footer .footer-right input,
+#footer footer .footer-right textarea {
+  border: none;
+  height: 2.5rem;
+  background-color: #e5e5e5;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+#footer footer .footer-right input:focus,
+#footer footer .footer-right textarea:focus {
+  outline: none;
+}
+
+#footer footer .footer-right textarea {
+  height: 5rem;
+  resize: none;
+}
+
+#footer footer .footer-right textarea::-webkit-scrollbar {
+  display: none;
+}
+
+#footer footer .footer-right #msg-btn {
+  margin-left: auto;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff7a00;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  -webkit-box-shadow: 5px 5px 0 #000;
+          box-shadow: 5px 5px 0 #000;
+}
+
+#footer footer .footer-right .social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+  font-size: 2rem;
+  color: #ff7a00;
 }
 /*# sourceMappingURL=style.css.map */
