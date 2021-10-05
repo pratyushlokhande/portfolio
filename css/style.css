@@ -13,6 +13,7 @@ body {
   width: 100%;
   background-color: #fff;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 #top-nav {
@@ -151,9 +152,8 @@ body {
 
 #home main .home-left,
 #home main .home-right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  overflow: hidden;
+  width: 50%;
 }
 
 #home main .home-left {
@@ -179,6 +179,16 @@ body {
 #home main .home-right {
   position: relative;
   height: 100%;
+}
+
+#home main .home-right .hoverlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #000;
 }
 
 #home main .home-right img {
@@ -260,18 +270,24 @@ body {
 }
 
 #about .about-left {
-  padding: 10rem;
+  padding: 5rem 10rem;
 }
 
-#about .about-left img {
+#about .about-left .abt-img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 5px 5px 0 #000;
+          box-shadow: 5px 5px 0 #000;
+}
+
+#about .about-left .abt-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-box-shadow: 5px 5px 0 #000;
-          box-shadow: 5px 5px 0 #000;
 }
 
 #about .about-right {
@@ -489,5 +505,91 @@ body {
   gap: 1rem;
   font-size: 2rem;
   color: #ff7a00;
+}
+
+#main-nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+
+#main-nav .toggle-switch {
+  position: absolute;
+  z-index: 1000;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  top: 5%;
+  right: 5%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+#main-nav .toggle-switch span {
+  position: absolute;
+  display: inline-block;
+  width: 3rem;
+  height: 3px;
+  background-color: #fff;
+}
+
+#main-nav .toggle-switch span:first-child {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+#main-nav .toggle-switch span:last-child {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+#main-nav .nav-left,
+#main-nav .nav-right {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  padding: 5rem;
+}
+
+#main-nav .nav-left ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main-nav .nav-left ul a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: #fff;
+  -webkit-transition: text-shadow 250ms ease;
+  transition: text-shadow 250ms ease;
+}
+
+#main-nav .nav-left ul a:hover {
+  text-shadow: 5px 5px 0 #ff7a00;
 }
 /*# sourceMappingURL=style.css.map */

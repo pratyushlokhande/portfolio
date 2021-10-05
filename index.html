@@ -17,11 +17,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Locomotive css-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    /> -->
   </head>
   <body>
     <nav id="top-nav">
       <div class="nav-logo">PKL</div>
-      <div class="nav-toggle"><span></span><span></span><span></span></div>
+      <div id="toggle" class="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
     </nav>
     <nav id="bottom-nav">
       <div class="page-ref">
@@ -29,23 +37,208 @@
         <h3>HOME</h3>
       </div>
       <div class="nav-pagination">
-        <span> <i class="fas fa-chevron-left"></i></span>
-        <span><i class="fas fa-chevron-right"></i></span>
+        <span id="mv-left"> <i class="fas fa-chevron-left"></i></span>
+        <span id="mv-right"><i class="fas fa-chevron-right"></i></span>
       </div>
     </nav>
-    <section id="home">
-      <main>
-        <div class="home-left">
-          <span>HE<br />LO!</span>
-        </div>
-        <div class="home-right">
-          <img src="./assets/images/my_img.jpg" alt="home-image" />
-          <div class="home-content">
-            <h1>I'm <span>Pratyush Lokhande</span></h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Quisquam, fugit hic! Autem enim quis corporis.
+    <div class="smooth-scroll">
+      <section id="home">
+        <main>
+          <div class="home-left">
+            <span>HE<br />LO!</span>
+          </div>
+          <div class="home-right">
+            <div class="hoverlay"></div>
+            <img src="./assets/images/my_img.jpg" alt="home-image" />
+            <div class="home-content">
+              <h1>I'm <span>Pratyush Lokhande</span></h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, fugit hic! Autem enim quis corporis.
+              </p>
+              <div class="social-menu">
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-codepen"></i>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+
+      <!-- About Page -->
+      <section id="about">
+        <main>
+          <div class="about-left">
+            <div class="abt-img">
+              <img
+                id="about-image"
+                src="./assets/images/PKL.jpg"
+                alt="about-image"
+              />
+            </div>
+          </div>
+          <div class="about-right">
+            <h1 class="abt-rt">About</h1>
+            <p class="abt-rt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at
+              blanditiis totam hic voluptate obcaecati dicta optio possimus
+              inventore consequuntur dolorum sapiente repellat perspiciatis
+              perferendis quos, numquam nemo sed asperiores? Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Praesentium voluptate natus
+              quod maiores? Ipsa tempore consectetur quibusdam animi corrupti?
+              Perferendis est adipisci nisi placeat amet ab laborum nam quas
+              harum.
             </p>
+            <p class="abt-rt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at
+              blanditiis totam hic voluptate obcaecati dicta optio possimus
+              inventore consequuntur dolorum sapiente repellat perspiciatis
+              perferendis quos, numquam nemo sed asperiores?
+            </p>
+            <a id="portfolio-btn" href="#" class="abt-rt"
+              ><i class="fas fa-file-invoice"></i>&nbsp;&nbsp;My Portfolio</a
+            >
+          </div>
+        </main>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h1>My Skill</h1>
+        <div class="skills-container">
+          <div class="skill">
+            <h3>C/C++</h3>
+            <span></span>
+          </div>
+          <div class="skill">
+            <h3>Python</h3>
+            <span></span>
+          </div>
+          <div class="skill">
+            <h3>Java</h3>
+            <span></span>
+          </div>
+
+          <div class="skill">
+            <h3>HTML/CSS</h3>
+            <span></span>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <span></span>
+          </div>
+          <div class="skill">
+            <h3>React JS</h3>
+            <span></span>
+          </div>
+
+          <div class="skill">
+            <h3>PHP</h3>
+            <span></span>
+          </div>
+          <div class="skill">
+            <h3>MySQL</h3>
+            <span></span>
+          </div>
+          <div class="skill">
+            <h3>Wordpress</h3>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h1>My Projects</h1>
+        <div class="projects-container">
+          <div class="project">
+            <div class="number">01</div>
+            <div class="project-content">
+              <h2>IBC's Website</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Rem, nesciunt.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="number">02</div>
+            <div class="project-content">
+              <h2>Proxy App</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa, accusantium?
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="number">03</div>
+            <div class="project-content">
+              <h2>Aura Music Player</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Rem, nesciunt.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="number">04</div>
+            <div class="project-content">
+              <h2>ToDo App</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa, accusantium?
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="number">05</div>
+            <div class="project-content">
+              <h2>Face Recogniton<br />Attendence System</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Rem, nesciunt.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="number">06</div>
+            <div class="project-content">
+              <h2>Automated<br />Linux Teminal</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa, accusantium?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <footer>
+          <div class="footer-left">PKL</div>
+          <div class="footer-right">
+            <h1>Message for me ?</h1>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="E-mail" />
+            <textarea placeholder="Message" rows="4"></textarea>
+            <a id="msg-btn" href="#"
+              ><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Send</a
+            >
+            <h1>Connect Me</h1>
             <div class="social-menu">
               <i class="fab fa-linkedin"></i>
               <i class="fab fa-instagram"></i>
@@ -54,184 +247,36 @@
               <i class="fab fa-codepen"></i>
             </div>
           </div>
-        </div>
-      </main>
-    </section>
-
-    <!-- About Page -->
-    <section id="about">
-      <main>
-        <div class="about-left">
-          <img src="./assets/images/PKL.jpg" alt="about-image" />
-        </div>
-        <div class="about-right">
-          <h1>About</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at
-            blanditiis totam hic voluptate obcaecati dicta optio possimus
-            inventore consequuntur dolorum sapiente repellat perspiciatis
-            perferendis quos, numquam nemo sed asperiores? Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Praesentium voluptate natus quod
-            maiores? Ipsa tempore consectetur quibusdam animi corrupti?
-            Perferendis est adipisci nisi placeat amet ab laborum nam quas
-            harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at
-            blanditiis totam hic voluptate obcaecati dicta optio possimus
-            inventore consequuntur dolorum sapiente repellat perspiciatis
-            perferendis quos, numquam nemo sed asperiores?
-          </p>
-          <a id="portfolio-btn" href="#"
-            ><i class="fas fa-file-invoice"></i>&nbsp;&nbsp;My Portfolio</a
-          >
-        </div>
-      </main>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h1>My Skill</h1>
-      <div class="skills-container">
-        <div class="skill">
-          <h3>C/C++</h3>
-          <span></span>
-        </div>
-        <div class="skill">
-          <h3>Python</h3>
-          <span></span>
-        </div>
-        <div class="skill">
-          <h3>Java</h3>
-          <span></span>
-        </div>
-
-        <div class="skill">
-          <h3>HTML/CSS</h3>
-          <span></span>
-        </div>
-        <div class="skill">
-          <h3>JavaScript</h3>
-          <span></span>
-        </div>
-        <div class="skill">
-          <h3>React JS</h3>
-          <span></span>
-        </div>
-
-        <div class="skill">
-          <h3>PHP</h3>
-          <span></span>
-        </div>
-        <div class="skill">
-          <h3>MySQL</h3>
-          <span></span>
-        </div>
-        <div class="skill">
-          <h3>Wordpress</h3>
-          <span></span>
-        </div>
+        </footer>
+      </section>
+    </div>
+    <nav id="main-nav">
+      <div id="counter-toggle" class="toggle-switch">
+        <span></span><span></span>
       </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h1>My Projects</h1>
-      <div class="projects-container">
-        <div class="project">
-          <div class="number">01</div>
-          <div class="project-content">
-            <h2>IBC's Website</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Rem, nesciunt.
-            </p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="number">02</div>
-          <div class="project-content">
-            <h2>Proxy App</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Culpa, accusantium?
-            </p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="number">03</div>
-          <div class="project-content">
-            <h2>Aura Music Player</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Rem, nesciunt.
-            </p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="number">04</div>
-          <div class="project-content">
-            <h2>ToDo App</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Culpa, accusantium?
-            </p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="number">05</div>
-          <div class="project-content">
-            <h2>Face Recogniton<br />Attendence System</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Rem, nesciunt.
-            </p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="number">06</div>
-          <div class="project-content">
-            <h2>Automated<br />Linux Teminal</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatem, omnis? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Culpa, accusantium?
-            </p>
-          </div>
-        </div>
+      <div class="nav-left">
+        <ul>
+          <a href="#home" class="mnavItem"> <li>Home</li> </a
+          ><a href="#about" class="mnavItem"> <li>About</li> </a
+          ><a href="#skills" class="mnavItem"> <li>My Skills</li> </a
+          ><a href="#projects" class="mnavItem"> <li>My Projects</li> </a
+          ><a href="#footer" class="mnavItem">
+            <li>Contact Me</li>
+          </a>
+        </ul>
       </div>
-    </section>
+      <div class="nav-right"></div>
+    </nav>
 
-    <!-- Footer -->
-    <section id="footer">
-      <footer>
-        <div class="footer-left">PKL</div>
-        <div class="footer-right">
-          <h1>Message for me ?</h1>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="E-mail" />
-          <textarea placeholder="Message" rows="4"></textarea>
-          <a id="msg-btn" href="#"
-            ><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Send</a
-          >
-          <h1>Connect Me</h1>
-          <div class="social-menu">
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-codepen"></i>
-          </div>
-        </div>
-      </footer>
-    </section>
+    <!-- Script -->
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+    <!-- scroll Trigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <!-- locomotive scroll -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>

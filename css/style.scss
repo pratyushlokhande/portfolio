@@ -25,6 +25,7 @@ body {
   width: 100%;
   background-color: $primary-color;
   font-family: $poppins;
+  overflow-x: hidden;
 }
 
 // Top Nav
@@ -136,7 +137,8 @@ body {
     // home-left, home-right
     .home-left,
     .home-right {
-      flex: 1;
+      overflow: hidden;
+      width: 50%;
     }
 
     // home-left
@@ -158,6 +160,16 @@ body {
     .home-right {
       position: relative;
       height: 100%;
+
+      .hoverlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #000;
+      }
 
       img {
         top: 0;
@@ -238,14 +250,21 @@ body {
 
   //   About Left
   .about-left {
-    padding: 10rem;
-    img {
+    padding: 5rem 10rem;
+    .abt-img {
+      overflow: hidden;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
-      //   filter: grayscale(50%) brightness(90%);
+      // border-radius: 5%;
       box-shadow: 5px 5px 0 $secondary-color;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        //   filter: grayscale(50%) brightness(90%);
+      }
     }
   }
 
@@ -441,6 +460,79 @@ body {
         gap: 1rem;
         font-size: 2rem;
         color: $accent-color;
+      }
+    }
+  }
+}
+
+// Main Nav
+#main-nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: $secondary-color;
+  transition: all 250ms ease;
+  transform: translateY(-100%);
+  opacity: 0;
+
+  .toggle-switch {
+    position: absolute;
+    z-index: 1000;
+    transform-origin: 50% 50%;
+    top: 5%;
+    right: 5%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 3rem;
+      height: 3px;
+      background-color: #fff;
+
+      &:first-child {
+        transform: rotateZ(45deg);
+      }
+      &:last-child {
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+
+  .nav-left,
+  .nav-right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding: 5rem;
+  }
+
+  .nav-left {
+    ul {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      a {
+        text-decoration: none;
+        font-size: 3rem;
+        color: $primary-color;
+        transition: text-shadow 250ms ease;
+
+        &:hover {
+          text-shadow: 5px 5px 0 $accent-color;
+        }
       }
     }
   }
