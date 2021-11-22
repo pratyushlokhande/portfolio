@@ -19,7 +19,6 @@ gsap.to(".hoverlay", {
     scrub: true,
   },
   width: "100%",
-  background: "#fff",
   duration: 1,
 });
 
@@ -41,20 +40,20 @@ gsap.to(".home-left", {
     end: "bottom center",
     scrub: true,
   },
-  background: "#fff",
-  duration: 1,
-});
-
-gsap.from("#about", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top bottom",
-    end: "top center",
-    scrub: true,
-  },
   background: "#000",
   duration: 1,
 });
+
+// gsap.from("#about", {
+//   scrollTrigger: {
+//     trigger: "#about",
+//     start: "top bottom",
+//     end: "top center",
+//     scrub: true,
+//   },
+//   background: "#000",
+//   duration: 1,
+// });
 
 gsap.to("#top-nav", {
   scrollTrigger: {
@@ -69,34 +68,16 @@ gsap.to("#top-nav", {
   duration: 1,
 });
 
-gsap.from(".abt-img", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top center",
-  },
-  height: 0,
-  duration: 1.5,
-});
-
-gsap.from("#about-image", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top center",
-  },
-  scale: 1.5,
-  duration: 1.5,
-});
-
-gsap.from(".abt-rt", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top center",
-  },
-  y: -100,
-  opacity: 0,
-  duration: 1.5,
-  stagger: 0.2,
-});
+// gsap.from(".abt-rt", {
+//   scrollTrigger: {
+//     trigger: "#about",
+//     start: "top center",
+//   },
+//   y: -100,
+//   opacity: 0,
+//   duration: 1.5,
+//   stagger: 0.2,
+// });
 
 // Nav Bar Toggle
 const toggleOne = document.querySelector("#toggle");
@@ -161,3 +142,49 @@ mvRight.addEventListener("click", () => {
       window.location.href.split("#")[0] + "#" + pages[currPage];
   }
 });
+
+let aboutTl = gsap.timeline({
+  scrollTrigger: { trigger: "#about", start: "top center" },
+  ease: "power1.out",
+});
+
+aboutTl.fromTo(".wrap-2", { right: "100%" }, { right: "0%", duration: 1 });
+aboutTl.fromTo(
+  ".wrap-1",
+  { right: "100%" },
+  { right: "0%", duration: 1 },
+  "-=1"
+);
+aboutTl.fromTo(".wrap-2", { left: "0%" }, { left: "100%", duration: 1 });
+aboutTl.fromTo(
+  ".wrap-1",
+  { left: "0%" },
+  { left: "100%", duration: 1 },
+  "-=0.5"
+);
+aboutTl.from(
+  "#about-image",
+  {
+    scale: 1.5,
+    duration: 1.5,
+  },
+  "-=1.25"
+);
+
+aboutTl.fromTo(
+  ".img-wrap",
+  {
+    right: "100%",
+  },
+  { right: "0%", duration: 1 },
+  "-=1.5"
+);
+
+aboutTl.fromTo(
+  ".abt-wrap",
+  {
+    left: "0%",
+  },
+  { left: "100%", duration: 1 },
+  "-=1"
+);
