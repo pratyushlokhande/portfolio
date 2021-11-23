@@ -115,33 +115,33 @@ toggleTwo.addEventListener("click", () => {
   gsap.to("#main-nav", { y: "-100%", opacity: 0, duration: 0.25 });
 });
 
-const mvLeft = document.querySelector("#mv-left");
-const mvRight = document.querySelector("#mv-right");
+// const mvLeft = document.querySelector("#mv-left");
+// const mvRight = document.querySelector("#mv-right");
 
 const pages = ["home", "about", "skills", "projects", "footer"];
 
 let currPage = 0;
 
-mvLeft.addEventListener("click", () => {
-  // window.scrollY = window.scrollY - 715 > 0 ? window.scrollY - 715 : 0;
-  // window.scrollBy(0, -715);
-  if (currPage > 0) {
-    currPage = currPage - 1;
-    window.location.href =
-      window.location.href.split("#")[0] + "#" + pages[currPage];
-  }
-});
+// mvLeft.addEventListener("click", () => {
+//   // window.scrollY = window.scrollY - 715 > 0 ? window.scrollY - 715 : 0;
+//   // window.scrollBy(0, -715);
+//   if (currPage > 0) {
+//     currPage = currPage - 1;
+//     window.location.href =
+//       window.location.href.split("#")[0] + "#" + pages[currPage];
+//   }
+// });
 
-mvRight.addEventListener("click", () => {
-  console.log("clicked");
-  // window.scrollY = window.scrollY + 715 < 4210 ? window.scrollY + 715 : 4210;
-  // window.scrollBy(0, 715);
-  if (currPage < 4) {
-    currPage = currPage + 1;
-    window.location.href =
-      window.location.href.split("#")[0] + "#" + pages[currPage];
-  }
-});
+// mvRight.addEventListener("click", () => {
+//   console.log("clicked");
+//   // window.scrollY = window.scrollY + 715 < 4210 ? window.scrollY + 715 : 4210;
+//   // window.scrollBy(0, 715);
+//   if (currPage < 4) {
+//     currPage = currPage + 1;
+//     window.location.href =
+//       window.location.href.split("#")[0] + "#" + pages[currPage];
+//   }
+// });
 
 let aboutTl = gsap.timeline({
   scrollTrigger: { trigger: "#about", start: "top center" },
