@@ -19,10 +19,10 @@
     />
 
     <!-- Locomotive css-->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    /> -->
+    />
   </head>
   <body>
     <nav id="top-nav">
@@ -112,7 +112,7 @@
 
       <!-- Skills -->
       <section id="skills">
-        <h1>My Skill</h1>
+        <h1 id="skill-heading">My Skill</h1>
         <div class="skills-container">
           <div class="skill">
             <h3>C/C++</h3>
@@ -157,7 +157,7 @@
 
       <!-- Projects -->
       <section id="projects">
-        <h1>My Projects</h1>
+        <h1 id="projects-heading">My Projects</h1>
         <div class="projects-container">
           <div class="project">
             <div class="number">01</div>
@@ -234,17 +234,21 @@
       <!-- Footer -->
       <section id="footer">
         <footer>
-          <div class="footer-left">PKL</div>
+          <div class="footer-left">
+            <span id="fban">PKL</span>
+            <div class="fwrap-1"></div>
+            <div class="fwrap-2"></div>
+          </div>
           <div class="footer-right">
-            <h1>Message for me ?</h1>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="E-mail" />
-            <textarea placeholder="Message" rows="4"></textarea>
-            <a id="msg-btn" href="#"
+            <h1 class="fanim">Message for me ?</h1>
+            <input class="fanim" type="text" placeholder="Name" />
+            <input class="fanim" type="email" placeholder="E-mail" />
+            <textarea class="fanim" placeholder="Message" rows="4"></textarea>
+            <a class="fanim" id="msg-btn" href="#"
               ><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Send</a
             >
-            <h1>Connect Me</h1>
-            <div class="social-menu">
+            <h1 class="fanim">Connect Me</h1>
+            <div class="social-menu fanim">
               <i class="fab fa-linkedin"></i>
               <i class="fab fa-instagram"></i>
               <i class="fab fa-facebook"></i>
@@ -281,7 +285,7 @@
     <!-- scroll Trigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <!-- locomotive scroll -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

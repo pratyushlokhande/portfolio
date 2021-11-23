@@ -252,7 +252,7 @@ body {
   //   About Left
   .about-left {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000;
     // padding: 5rem 10rem;
     .abt-img {
@@ -306,6 +306,7 @@ body {
     flex-direction: column;
     gap: 1rem;
     padding: 5rem 10rem 5rem 5rem;
+    min-height: 100vh;
 
     h1 {
       font-size: 5rem;
@@ -437,6 +438,7 @@ body {
   // min-height: 100vh;
 
   footer {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -447,14 +449,36 @@ body {
     }
 
     .footer-left {
+      position: relative;
+      height: 100vh;
       background-color: $secondary-color;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: $barlow;
-      font-size: 5rem;
-      color: $primary-color;
-      text-shadow: 5px 5px 0 $accent-color;
+
+      span {
+        font-family: $barlow;
+        font-size: 5rem;
+        color: $primary-color;
+        text-shadow: 5px 5px 0 $accent-color;
+      }
+
+      .fwrap-1,
+      .fwrap-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .fwrap-1 {
+        background-color: $accent-color;
+      }
+
+      .fwrap-2 {
+        background-color: #fff;
+      }
     }
 
     .footer-right {
@@ -526,7 +550,7 @@ body {
   .toggle-switch {
     position: absolute;
     z-index: 1000;
-    transform-origin: 50% 50%;
+    transform-origin: center;
     top: 5%;
     right: 5%;
     width: 3rem;
@@ -535,15 +559,18 @@ body {
     span {
       position: absolute;
       display: inline-block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 3rem;
       height: 3px;
       background-color: #fff;
 
       &:first-child {
-        transform: rotateZ(45deg);
+        transform: translate(-50%, -50%) rotateZ(45deg);
       }
       &:last-child {
-        transform: rotateZ(-45deg);
+        transform: translate(-50%, -50%) rotateZ(-45deg);
       }
     }
   }
@@ -581,6 +608,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  #main-nav {
+    .nav-left {
+      padding: 5rem 2rem;
+    }
+  }
+
   #top-nav {
     padding: 1rem;
   }
@@ -603,6 +636,10 @@ body {
 
         h1 {
           font-size: 2rem;
+
+          span {
+            text-shadow: 2.5px 2.5px 0 $accent-color;
+          }
         }
       }
     }
@@ -620,6 +657,7 @@ body {
 
       h1 {
         font-size: 3.5rem;
+        text-shadow: 2.5px 2.5px 0 $accent-color;
       }
 
       #portfolio-btn {
@@ -639,6 +677,7 @@ body {
 
     h1 {
       font-size: 3rem;
+      text-shadow: 2.5px 2.5px 0 $accent-color;
     }
 
     .skills-container {
@@ -654,6 +693,7 @@ body {
 
     h1 {
       font-size: 3rem;
+      text-shadow: 2.5px 2.5px 0 $accent-color;
     }
 
     .projects-container {

@@ -272,7 +272,7 @@ body {
 
 #about .about-left {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #000;
 }
 
@@ -331,6 +331,7 @@ body {
           flex-direction: column;
   gap: 1rem;
   padding: 5rem 10rem 5rem 5rem;
+  min-height: 100vh;
 }
 
 #about .about-right h1 {
@@ -458,6 +459,7 @@ body {
 }
 
 #footer footer {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -471,6 +473,8 @@ body {
 }
 
 #footer footer .footer-left {
+  position: relative;
+  height: 100vh;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,10 +485,30 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#footer footer .footer-left span {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 5rem;
   color: #fff;
   text-shadow: 5px 5px 0 #ff7a00;
+}
+
+#footer footer .footer-left .fwrap-1,
+#footer footer .footer-left .fwrap-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#footer footer .footer-left .fwrap-1 {
+  background-color: #ff7a00;
+}
+
+#footer footer .footer-left .fwrap-2 {
+  background-color: #fff;
 }
 
 #footer footer .footer-right {
@@ -570,8 +594,8 @@ body {
 #main-nav .toggle-switch {
   position: absolute;
   z-index: 1000;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
   top: 5%;
   right: 5%;
   width: 3rem;
@@ -582,19 +606,23 @@ body {
 #main-nav .toggle-switch span {
   position: absolute;
   display: inline-block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 3rem;
   height: 3px;
   background-color: #fff;
 }
 
 #main-nav .toggle-switch span:first-child {
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  -webkit-transform: translate(-50%, -50%) rotateZ(45deg);
+          transform: translate(-50%, -50%) rotateZ(45deg);
 }
 
 #main-nav .toggle-switch span:last-child {
-  -webkit-transform: rotateZ(-45deg);
-          transform: rotateZ(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotateZ(-45deg);
+          transform: translate(-50%, -50%) rotateZ(-45deg);
 }
 
 #main-nav .nav-left,
@@ -634,6 +662,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  #main-nav .nav-left {
+    padding: 5rem 2rem;
+  }
   #top-nav {
     padding: 1rem;
   }
@@ -654,6 +685,9 @@ body {
   #home main .home-right .home-content h1 {
     font-size: 2rem;
   }
+  #home main .home-right .home-content h1 span {
+    text-shadow: 2.5px 2.5px 0 #ff7a00;
+  }
   #about main .about-left {
     display: none;
   }
@@ -664,6 +698,7 @@ body {
   }
   #about main .about-right h1 {
     font-size: 3.5rem;
+    text-shadow: 2.5px 2.5px 0 #ff7a00;
   }
   #about main .about-right #portfolio-btn {
     margin-top: 1rem;
@@ -678,6 +713,7 @@ body {
   }
   #skills h1 {
     font-size: 3rem;
+    text-shadow: 2.5px 2.5px 0 #ff7a00;
   }
   #skills .skills-container {
         grid-template-areas: "skill" "skill" "skill" "skill" "skill" "skill" "skill" "skill" "skill";
@@ -690,6 +726,7 @@ body {
   }
   #projects h1 {
     font-size: 3rem;
+    text-shadow: 2.5px 2.5px 0 #ff7a00;
   }
   #projects .projects-container {
     margin: 0;
